@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace ConsoleAssignment9
 {
+    // Custom exception for validation errors
+    public class ValidationException : Exception
+    {
+        public ValidationException(string message) : base(message)
+        {
+        }
+
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -13,7 +21,7 @@ namespace ConsoleAssignment9
             try
             {
                 RegisterUser();
-                Console.WriteLine("User Registration Successful!");
+                Console.WriteLine("User Registration Successful!!!");
             }
             catch (ValidationException ex)
             {
@@ -88,14 +96,7 @@ namespace ConsoleAssignment9
         }
     }
 
-    // Custom exception for validation errors
-    public class ValidationException : Exception
-    {
-        public ValidationException(string message) : base(message)
-        {
-        }
-
-    }
+  
     
 }
 
